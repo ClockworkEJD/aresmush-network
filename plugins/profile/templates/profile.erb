@@ -33,8 +33,8 @@
 <%= divider %>
 %xh<%= left( t('profile.handle'), 12 ) %>%xn @<%= handle_name %> - <%= handle_profile %>
 <% end %>
+<% if show_dating_profile? %>
 <%= line_with_text "Dating Profile" %>
-<% unless @char.is_admin? %>
 <%= dating_profile %>
 <% end %>
 <% if dating_match? or dating_swipe? %>

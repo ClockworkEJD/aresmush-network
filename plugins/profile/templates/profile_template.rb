@@ -19,6 +19,10 @@ module AresMUSH
         Demographics.visible_demographics(@char, @enactor).select { |d| d != 'birthdate' }
       end
 
+      def show_dating_profile?
+        DateProf.show_dating_profile?(@enactor, @char)
+      end
+
       def dating_match?
         @enactor.match_for(@char)
       end

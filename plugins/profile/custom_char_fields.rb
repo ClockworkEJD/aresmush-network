@@ -8,7 +8,7 @@ module AresMUSH
       def self.get_fields_for_viewing(char, viewer)
         return {
           dateprof: Website.format_markdown_for_html(char.dateprof),
-          canSwipe: DateProf::can_swipe?(char),
+          showDateProf: DateProf.show_dating_profile?(viewer, char),
         }
       end
     
@@ -37,7 +37,6 @@ module AresMUSH
         char.update(dateprof: chargen_data[:custom][:dateprof])
         return []
       end
-      
     end
   end
 end
