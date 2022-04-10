@@ -18,7 +18,7 @@ module AresMUSH
 
     def self.show_dating_profile?(enactor, char)
       return true if can_swipe?(char)
-      return false if char.is_playerbit?
+      return false if char.is_admin? or char.is_playerbit?
       return true if Chargen.can_approve?(enactor) and !char.is_approved?
       return false
     end
