@@ -55,8 +55,7 @@ module AresMUSH
           end
       
           if (!search_log.blank?)
-            # scenes = scenes.select { |s| "#{s.summary} #{s.scene_log.log}" =~ /\b#{search_log}\b/i }
-            scenes = scenes.select { |s| s.scene_log.log =~ /\b#{search_log}\b/i }
+            scenes = scenes.select { |s| "#{s.summary} #{s.scene_log.log}" =~ /\b#{search_log}\b/i }
           end
       
           scenes = scenes.sort_by { |s| s.date_shared || s.created_at }.reverse
