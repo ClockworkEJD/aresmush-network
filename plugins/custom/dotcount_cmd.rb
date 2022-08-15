@@ -11,8 +11,8 @@ module AresMUSH
  
        def handle
          max_xp = Global.read_config("fs3skills", "max_xp_hoard")
-         max_attrs = Global.read_config("fs3skills", "max_points_on_attrs")/2 + Global.read_config("fs3skills", "attr_dots_beyond_chargen_max") + 12
-         max_action = Global.read_config("fs3skills", "max_points_on_action") + Global.read_config("fs3skills", "action_dots_beyond_chargen_max") + 18
+         max_attrs = Global.read_config("fs3skills", "max_points_on_attrs")/2 + Global.read_config("fs3skills", "attr_dots_beyond_chargen_max") + 14
+         max_action = Global.read_config("fs3skills", "max_points_on_action") + Global.read_config("fs3skills", "action_dots_beyond_chargen_max") + 12
          ClassTargetFinder.with_a_character(self.name, client, enactor) do |model|
            current_xp = model.xp
            pad_xp = current_xp < 10 ? '.' : ''
