@@ -1,6 +1,6 @@
 module AresMUSH
     module Custom
-     class DotcountCmd
+     class DotCountCmd
        include CommandHandler
  
        attr_accessor :name
