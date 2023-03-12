@@ -23,8 +23,6 @@ module AresMUSH
         when nil
           return WordCountCmd
         end
-      when "logdelete"
-        return LogDeleteCmd
       when "logclear"
         return LogClearCmd
       end   
