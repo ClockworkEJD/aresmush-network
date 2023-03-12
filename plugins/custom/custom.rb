@@ -30,7 +30,7 @@ module AresMUSH
         when "delete"
           return LogDeleteCmd
         when nil
-          return LogClearCmd
+          return LogCmd
         end
       end   
       return nil
