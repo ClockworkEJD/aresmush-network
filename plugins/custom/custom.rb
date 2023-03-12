@@ -23,15 +23,10 @@ module AresMUSH
         when nil
           return WordCountCmd
         end
-      when "log"
-        case cmd.switch
-        when "clear"
-          return LogClearCmd
-        when "delete"
-          return LogDeleteCmd
-        when nil
-          return LogClearCmd
-        end
+      when "logdelete"
+        return LogDeleteCmd
+      when "logclear"
+        return LogClearCmd
       end   
       return nil
     end
